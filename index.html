@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            
+            
+           
+        }
+        .container{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            background-color: rgba(00, 0, 00, 0.8);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+            
+           
+        }
+        fieldset{
+            border:3px solid dodgerblue;
+        }
+        legend{
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 5px;
+            
+        }
+        .for-group{
+            position: relative;
+          
+        }
+        .for-control{
+            background-color: none;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            color: black;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+       
+
+        }
+       button:hover{
+            background-image:linear-gradient(to right, rgb(0,80,172),rgb(80,19,195));
+           
+
+        }
+        button{
+            background-image:linear-gradient(to right, rgb(20,147,220),rgb(17,54,71));
+           width: 100%;
+           border: none;
+           padding: 15px;
+           color: #fff;
+           font-size: 15px;
+           cursor: pointer;
+           border-radius: 15px;
+
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <form >
+        <fieldset>
+        <legend><strong>Formulário</strong></legend>
+        <br>
+
+   <div class="for-group">
+       <input type="text"  id="cep" class="for-control" >
+       <label for="cep">Cep</label>
+       <button onClick="buscar('daniel')">enviar</button>
+      
+
+      
+   </div>
+   <br>
+   <div class="for-group">
+    <input type="text"  id="uf" class="for-control" >
+    <label for="uf">UF</label>
+   
+
+   </div>
+   <br>
+   <div class="for-group">
+    <input type="text"  id="localidade" class="for-control" >
+    <label for="localidade">Localidade</label>
+    
+
+   </div>
+   <br>
+   <div class="for-group">
+    <input type="text"  id="bairro" class="for-control" >
+    <label for="bairro">Bairro</label>
+   
+
+   </div>
+   
+
+   <br>
+  
+   </fieldset>
+    </form>
+    </div>
+    <script>
+       function buscar(parametro)
+       
+
+       {
+        alert(parametro);   
+
+       }
+
+
+
+ 
+}
+</script>
+
+
+
+        
+
+    
+</body>
+
+    
+
+</html>
+
+       
+        
+        
+        
+        
+        
+     
+       
+        
+     
+      
+   
+       
+
+
+
+  
+   
+    
+        
+           
+   
+    
