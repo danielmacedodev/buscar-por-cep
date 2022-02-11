@@ -81,9 +81,9 @@
         <br>
 
    <div class="for-group">
-       <input type="text"  id="cep" class="for-control" >
+       <input type="number"  id="cep" class="for-control" >
        <label for="cep">Cep</label>
-       <button onClick="buscar('daniel')">enviar</button>
+       <button type="button" onClick="buscar()">enviar</button>
       
 
       
@@ -118,22 +118,33 @@
     </div>
     <script>
        function buscar(parametro)
-       
-
        {
-        alert(parametro);   
-
+	   
+	   	var cep = document.getElementById('cep').value;
+		
+		if(cep !=""){
+		var resultado = httpGet();
+		}else {
+			alert('digite um cep!');
+		}
+		
+		//esta linha coloca o valor do campo.
+		document.getElementById('localidade').value = resultado.rua;//verificar qual o nome do campo que tras o nome da rua!
+		//resultado.bairro
+		//resultado.uf;
+        alert(cep);   
+		
        }
-
-
-
- 
+	   
+	   function httpGet()
+{
+var url = "adicionar a URL do serviço de cep aqui!";
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
 }
 </script>
-
-
-
-        
 
     
 </body>
