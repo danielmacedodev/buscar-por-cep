@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Busca Por Cep</title>
+    <link rel="shortcut icon" href="transferir.jpeg" type="image/x-icon">
     <style>
         
         body{
@@ -78,101 +79,40 @@
         <form >
         <fieldset>
         <legend><strong>Formulário</strong></legend>
+        <div class="for-group">
+            <input type="text"  id="cep" class="for-control" >
+            <label for="cep">CEP</label>
+        </div>
         <br>
-
    <div class="for-group">
-       <input type="number"  id="cep" class="for-control" >
-       <label for="cep">Cep</label>
-       <button type="button" onClick="buscar()">enviar</button>
-      
+    <input type="text"  id="estado" class="for-control" >
+    <label for="estado">ESTADO</label>
+        </div>
+        <br>
+        <div class="for-group">
+            <input type="text"  id="cidade" class="for-control" >
+            <label for="cidade">CIDADE</label>
+        </div>
+        <br>
+        <div class="for-group">
+            <input type="text"  id="localidade" class="for-control" >
+            <label for="localidade">BAIRRO</label>
+        </div>
+        <input type="text"  id="rua" class="for-control" >
+            <label for="rua">RUA</label>
 
-      
-   </div>
-   <br>
-   <div class="for-group">
-    <input type="text"  id="uf" class="for-control" >
-    <label for="uf">UF</label>
+        <div>
+            
+
+        </div>
    
-
-   </div>
-   <br>
-   <div class="for-group">
-    <input type="text"  id="localidade" class="for-control" >
-    <label for="localidade">Localidade</label>
-    
-
-   </div>
-   <br>
-   <div class="for-group">
-    <input type="text"  id="bairro" class="for-control" >
-    <label for="bairro">Bairro</label>
-   
-
-   </div>
-   
-
-   <br>
   
-   </fieldset>
-    </form>
-    </div>
-    <script>
-       function buscar(parametro)
-       {
-	   
-	   	var cep = document.getElementById('cep').value;
-		
-		if(cep !=""){
-		var resultado = httpGet();
-		}else {
-			alert('digite um cep!');
-		}
-		
-		//esta linha coloca o valor do campo.
-		document.getElementById('localidade').value = resultado.rua;//verificar qual o nome do campo que tras o nome da rua!
-		//resultado.bairro
-		//resultado.uf;
-        alert(cep);   
-		
-       }
-	   
-	   function httpGet()
-{
-var url = "adicionar a URL do serviço de cep aqui!";
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
-</script>
-
-    
-</body>
-
-    
-
-</html>
-
-       
-        
-        
-        
-        
-        
-     
-       
-        
-     
-      
+    <button type="button" onClick="buscar()">enviar</button>
+        </div>
    
-       
-
-
-
-  
-   
-    
-        
-           
-   
-    
+        </fieldset>
+            </form>
+            </div>
+            <script src="cep.js"></script>
+ </body>
+ </html>   
